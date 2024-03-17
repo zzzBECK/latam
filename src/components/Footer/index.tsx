@@ -1,7 +1,7 @@
 import { TiHome } from "react-icons/ti";
 import { IoNotificationsOutline } from "react-icons/io5";
 import mundo from "../../assets/mundo.svg";
-import react3 from "../../assets/react3.svg";
+import maleta from "../../assets/maleta.svg";
 
 export default function Footer() {
   return (
@@ -23,32 +23,89 @@ export default function Footer() {
           display: "flex",
           color: "black",
           alignItems: "center",
+          flexDirection: "column",
         }}
       >
-        <div style={{ marginRight: "2em" }}>
-          <TiHome size={"2em"} color="#100050" />
-          <p
-            style={{
-              opacity: 0.5,
-              fontSize: "0.8em",
-            }}
-          >
-            Home
-          </p>
-        </div>
-        <div>
-          <IoNotificationsOutline size={"2em"} color="#100050" />
-          <p
-            style={{
-              opacity: 0.5,
-              fontSize: "0.8em",
-            }}
-          >
-            Notificação
-          </p>
-          <img src={mundo} />
-          <img src={react3} />
-        </div>
+        <TiHome size={"2em"} color="#100050" />
+        <p
+          style={{
+            opacity: 0.5,
+            fontSize: "0.8em",
+          }}
+        >
+          Home
+        </p>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          color: "black",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img
+          style={{
+            display: "flex",
+            maxWidth: "2em",
+          }}
+          src={mundo}
+        />
+        <p
+          style={{
+            opacity: 0.5,
+            fontSize: "0.8em",
+          }}
+        >
+          Comprar
+        </p>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          color: "black",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img
+          style={{
+            display: "flex",
+            maxWidth: "2em",
+          }}
+          src={maleta}
+        />
+        <p
+          style={{
+            opacity: 0.5,
+            fontSize: "0.8em",
+          }}
+        >
+          Minhas viagens
+        </p>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          color: "black",
+          alignItems: "center",
+        }}
+      >
+        <IoNotificationsOutline size={"2em"} color="#100050" />
+        <p
+          style={{
+            opacity: 0.5,
+            fontSize: "0.8em",
+          }}
+        >
+          Notificação
+        </p>
       </div>
     </div>
   );
