@@ -29,8 +29,9 @@ export default function Footer() {
             height: "2em",
             backgroundImage: `url('latam2.jpg')`,
             backgroundColor: "white",
-            backgroundSize: "cover", 
+            backgroundSize: "cover",
             cursor: "pointer",
+            borderRadius: "50%",
           }}
           onClick={() => setCount(count + 1)}
         />
