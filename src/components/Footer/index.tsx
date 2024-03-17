@@ -2,6 +2,7 @@ import { TiHome } from "react-icons/ti";
 import { IoNotificationsOutline } from "react-icons/io5";
 import mundo from "../../assets/mundo.svg";
 import maleta from "../../assets/maleta.svg";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -38,32 +39,40 @@ export default function Footer() {
         </p>
       </div>
 
-      <div
+      <NavLink
         style={{
-          display: "flex",
-          flexDirection: "column",
+          textDecoration: "none",
           color: "black",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "pointer",
         }}
+        to={"/comprar"}
       >
-        <img
+        <div
           style={{
             display: "flex",
-            maxWidth: "2em",
-          }}
-          src={mundo}
-        />
-        <p
-          style={{
-            opacity: 0.5,
-            fontSize: "0.8em",
+            flexDirection: "column",
+            color: "black",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
           }}
         >
-          Comprar
-        </p>
-      </div>
+          <img
+            style={{
+              display: "flex",
+              maxWidth: "2em",
+            }}
+            src={mundo}
+          />
+          <p
+            style={{
+              opacity: 0.5,
+              fontSize: "0.8em",
+            }}
+          >
+            Comprar
+          </p>
+        </div>
+      </NavLink>
 
       <div
         style={{
