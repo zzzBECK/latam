@@ -24,6 +24,7 @@ export default function Footer() {
           color: "black",
           alignItems: "center",
           flexDirection: "column",
+          cursor: "pointer",
         }}
       >
         <TiHome size={"2em"} color="#100050" />
@@ -44,6 +45,7 @@ export default function Footer() {
           color: "black",
           alignItems: "center",
           justifyContent: "center",
+          cursor: "pointer",
         }}
       >
         <img
@@ -70,6 +72,7 @@ export default function Footer() {
           color: "black",
           alignItems: "center",
           justifyContent: "center",
+          cursor: "pointer",
         }}
       >
         <img
@@ -95,6 +98,7 @@ export default function Footer() {
           flexDirection: "column",
           color: "black",
           alignItems: "center",
+          cursor: "pointer",
         }}
       >
         <IoNotificationsOutline size={"2em"} color="#100050" />
