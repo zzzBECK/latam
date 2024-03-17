@@ -5,7 +5,7 @@ export default function Home() {
         display: "flex",
         width: "100vw",
         minHeight: "100vh",
-        backgroundColor: "#fff",
+        backgroundColor: "white",
       }}
     ></div>
   );

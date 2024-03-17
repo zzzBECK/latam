@@ -25,11 +25,12 @@ export default function Footer() {
       >
         <div
           style={{
-            display: "flex",
             width: "2em",
             height: "2em",
-            backgroundImage: "latamicon.jpeg",
-            backgroundColor: "red",
+            backgroundImage: `url('latam2.jpg')`,
+            backgroundColor: "white",
+            backgroundSize: "cover", 
+            cursor: "pointer",
           }}
           onClick={() => setCount(count + 1)}
         />

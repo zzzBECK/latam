@@ -1,4 +1,7 @@
 import { TiHome } from "react-icons/ti";
+import { IoNotificationsOutline } from "react-icons/io5";
+import mundo from "../../assets/mundo.svg";
+import react3 from "../../assets/react3.svg";
 
 export default function Footer() {
   return (
@@ -18,20 +21,34 @@ export default function Footer() {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
           color: "black",
           alignItems: "center",
         }}
       >
-        <TiHome size={"2em"} color="#100050" />
-        <p
-          style={{
-            opacity: 0.5,
-            fontSize: "0.8em",
-          }}
-        >
-          Home
-        </p>
+        <div style={{ marginRight: "2em" }}>
+          <TiHome size={"2em"} color="#100050" />
+          <p
+            style={{
+              opacity: 0.5,
+              fontSize: "0.8em",
+            }}
+          >
+            Home
+          </p>
+        </div>
+        <div>
+          <IoNotificationsOutline size={"2em"} color="#100050" />
+          <p
+            style={{
+              opacity: 0.5,
+              fontSize: "0.8em",
+            }}
+          >
+            Notificação
+          </p>
+          <img src={mundo} />
+          <img src={react3} />
+        </div>
       </div>
     </div>
   );
