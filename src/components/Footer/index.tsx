@@ -19,14 +19,16 @@ export default function Footer() {
         padding: "0 2em",
       }}
     >
-      <div
+      <NavLink
         style={{
-          display: "flex",
+          textDecoration: "none",
           color: "black",
-          alignItems: "center",
+          display: "flex",
           flexDirection: "column",
+          alignItems: "center",
           cursor: "pointer",
         }}
+        to={"/home"}
       >
         <TiHome size={"2em"} color="#100050" />
         <p
@@ -37,52 +39,47 @@ export default function Footer() {
         >
           Home
         </p>
-      </div>
+      </NavLink>
 
       <NavLink
         style={{
           textDecoration: "none",
           color: "black",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          cursor: "pointer",
         }}
         to={"/comprar"}
       >
-        <div
+        <img
           style={{
             display: "flex",
-            flexDirection: "column",
-            color: "black",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
+            maxWidth: "2em",
+          }}
+          src={mundo}
+          alt="Ícone Mundo"
+        />
+        <p
+          style={{
+            opacity: 0.5,
+            fontSize: "0.8em",
           }}
         >
-          <img
-            style={{
-              display: "flex",
-              maxWidth: "2em",
-            }}
-            src={mundo}
-          />
-          <p
-            style={{
-              opacity: 0.5,
-              fontSize: "0.8em",
-            }}
-          >
-            Comprar
-          </p>
-        </div>
+          Comprar
+        </p>
       </NavLink>
 
-      <div
+      <NavLink
         style={{
+          textDecoration: "none",
+          color: "black",
           display: "flex",
           flexDirection: "column",
-          color: "black",
           alignItems: "center",
-          justifyContent: "center",
           cursor: "pointer",
         }}
+        to={"/viagens"}
       >
         <img
           style={{
@@ -90,6 +87,7 @@ export default function Footer() {
             maxWidth: "2em",
           }}
           src={maleta}
+          alt="Ícone Maleta"
         />
         <p
           style={{
@@ -99,16 +97,18 @@ export default function Footer() {
         >
           Minhas viagens
         </p>
-      </div>
+      </NavLink>
 
-      <div
+      <NavLink
         style={{
+          textDecoration: "none",
+          color: "black",
           display: "flex",
           flexDirection: "column",
-          color: "black",
           alignItems: "center",
           cursor: "pointer",
         }}
+        to={"/notificacoes"}
       >
         <IoNotificationsOutline size={"2em"} color="#100050" />
         <p
@@ -119,7 +119,7 @@ export default function Footer() {
         >
           Notificação
         </p>
-      </div>
+      </NavLink>
     </div>
   );
 }

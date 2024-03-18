@@ -1,8 +1,15 @@
-import { useState } from "react";
-import { IoMdMenu } from "react-icons/io";
-
 export default function Footer() {
-  const [count, setCount] = useState(0);
+  const getGreeting = () => {
+    const currentTime = new Date().getHours();
+
+    if (currentTime >= 6 && currentTime < 12) {
+      return "Bom dia";
+    } else if (currentTime >= 12 && currentTime < 18) {
+      return "Boa tarde";
+    } else {
+      return "Boa noite";
+    }
+  };
 
   return (
     <div
@@ -33,20 +40,18 @@ export default function Footer() {
             cursor: "pointer",
             borderRadius: "50%",
           }}
-          onClick={() => setCount(count + 1)}
         />
 
         <h4
           style={{
             fontWeight: "400",
             fontSize: "clamp(0.8em, 1.5vw, 2em)",
+            color: "white", 
           }}
         >
-          {count}
+          {getGreeting()}
         </h4>
       </div>
-
-      <IoMdMenu size={"2em"} />
     </div>
   );
 }

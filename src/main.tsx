@@ -5,6 +5,8 @@ import App from "./App.tsx";
 import "./index.css";
 import Home from "./pages/Home/index.tsx";
 import Comprar from "./pages/Comprar/index.tsx";
+import Notificacoes from "./pages/Notificacoes/index.tsx";
+import Viagens from "./pages/Viagens/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -12,12 +14,20 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/Home",
         element: <Home />,
       },
       {
         path: "/comprar",
         element: <Comprar />,
+      },
+      {
+        path: "/Notificacoes",
+        element: <Notificacoes />,
+      },
+      {
+        path: "/Viagens",
+        element: <Viagens/>,
       },
     ],
   },
