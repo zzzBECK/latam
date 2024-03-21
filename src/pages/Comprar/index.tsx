@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Comprar() {
   return (
     <div
@@ -20,10 +18,11 @@ export default function Comprar() {
           color: "#000",
           padding: "1em",
           boxShadow: "0 0 0.5em rgba(0, 0, 0, 0.2)",
-          fontWeight: "bold", 
+          fontWeight: "bold",
         }}
       >
-        Desculpe o transtorno, nosso sitema está fora do ar, tente novamente mais tarde!
+        Desculpe o transtorno, nosso sitema está fora do ar, tente novamente
+        mais tarde!
       </div>
     </div>
   );
