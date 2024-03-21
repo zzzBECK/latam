@@ -45,10 +45,6 @@ export default function Home() {
 
   console.log(items);
   
-  const handleBoxClick = () => {
-    alert("Desculpe o transtorno, nosso sitema está fora do ar, tente novamente mais tarde!");
-  };
-
   return (
     <div
       style={{
@@ -87,9 +83,9 @@ export default function Home() {
       </p>
 
       <div style={{ display: "flex", gap: "1em" }}>
-        <Box title="Compre um pacote" image={maleta} onClick={handleBoxClick}/>
-        <Box title="Reserve um hotel" image={mundo} onClick={handleBoxClick}/>
-        <Box title="Alugue um carro" image={carro} onClick={handleBoxClick}/>
+        <Box title="Compre um pacote" image={maleta} />
+        <Box title="Reserve um hotel" image={mundo} />
+        <Box title="Alugue um carro" image={carro} />
       </div>
       <FullWidthBox
         title="Já tem um voo?"
