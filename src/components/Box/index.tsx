@@ -85,6 +85,7 @@ export function FullWidthBox({ title, subtitle }: { title: string, subtitle: str
         Adicionar voo
       </button>
     </div>
+
   );
 }
 

@@ -4,6 +4,7 @@ import mundo from "../../assets/mundo.svg";
 import react from "../../assets/react.svg";
 import tailandia from "../../assets/tailandia.jpg";
 
+
 export default function Home() {
   return (
     <div
@@ -11,11 +12,10 @@ export default function Home() {
         display: "flex",
         flexDirection: "column", 
         width: "100vw",
-        minHeight: "100vh",
-        justifyContent: "center",
+        minHeight: "90vh",
         alignItems: "center",
         background: "#fff",
-        gap: "1em",
+        gap: "2em",
         borderRadius: "1em",
         padding: "1em", 
       }}
@@ -31,9 +31,10 @@ export default function Home() {
           marginTop:"0", 
           marginBottom: "1em", 
         }}
+        
       />
-      <p style={{ textAlign: "center", color: "#000", fontSize:"clamp(0.8em, 1vw, 1em)" }}>Encontre tudo em um único lugar</p> 
-      <p style={{ textAlign: "center", color: "#4658E0", fontSize: "clamp(0.8em, 1vw, 1em)" }}>Acumules Pontos LATAM Pass e Pontos Qualificáveis</p> 
+      <p style={{ textAlign: "center", color: "#000", fontSize:"clamp(0.8em, 1vw, 1em)" }}>Encontre tudo em um único lugar Acumules Pontos LATAM Pass e Pontos Qualificáveis</p> 
+      
       <div style={{ display: "flex", gap: "1em" }}> 
         <Box title="Compre um pacote" image={maleta} />
         <Box title="Reserve um hotel" image={mundo} />

@@ -28,7 +28,7 @@ export default function Footer() {
           alignItems: "center",
           cursor: "pointer",
         }}
-        to={"/home"}
+        to={"/"}
       >
         <TiHome size={"2em"} color="#100050" />
         <p
