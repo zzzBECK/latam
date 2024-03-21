@@ -1,7 +1,7 @@
 import Box, { FullWidthBox } from "../../components/Box";
 import maleta from "../../assets/maleta.svg";
 import mundo from "../../assets/mundo.svg";
-import react from "../../assets/react.svg";
+import carro from "../../assets/carro.svg";
 import tailandia from "../../assets/tailandia.jpg";
 import { useEffect, useState } from "react";
 import FirebaseService from "../../services/FirebaseService";
@@ -44,6 +44,10 @@ export default function Home() {
   }, []);
 
   console.log(items);
+  
+  const handleBoxClick = () => {
+    alert("Desculpe o transtorno, nosso sitema está fora do ar, tente novamente mais tarde!");
+  };
 
   return (
     <div
@@ -78,14 +82,14 @@ export default function Home() {
           fontSize: "clamp(0.8em, 1vw, 1em)",
         }}
       >
-        Encontre tudo em um único lugar Acumules Pontos LATAM Pass e Pontos
+         Encontre tudo em um único lugar Acumules Pontos LATAM Pass e Pontos
         Qualificáveis
       </p>
 
       <div style={{ display: "flex", gap: "1em" }}>
-        <Box title="Compre um pacote" image={maleta} />
-        <Box title="Reserve um hotel" image={mundo} />
-        <Box title="Alugue um carro" image={react} />
+        <Box title="Compre um pacote" image={maleta} onClick={handleBoxClick}/>
+        <Box title="Reserve um hotel" image={mundo} onClick={handleBoxClick}/>
+        <Box title="Alugue um carro" image={carro} onClick={handleBoxClick}/>
       </div>
       <FullWidthBox
         title="Já tem um voo?"

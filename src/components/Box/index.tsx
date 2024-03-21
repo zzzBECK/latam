@@ -1,9 +1,16 @@
 interface BoxProps {
   title: string;
   image: string;
+  onClick?: () => void;
 }
 
-export default function Box({ title, image }: BoxProps) {
+export default function Box({ title, image, onClick }: BoxProps) {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
+  
   return (
     <div
       style={{
@@ -20,6 +27,7 @@ export default function Box({ title, image }: BoxProps) {
         gap: "0.5em",
         cursor: "pointer",
       }}
+      onClick={handleClick}
     >
       <img
         src={image}
