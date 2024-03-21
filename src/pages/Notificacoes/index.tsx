@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Comprar() {
   return (
     <div
@@ -23,7 +21,7 @@ export default function Comprar() {
           fontWeight: "bold", 
         }}
       >
-        Desculpe o transtorno, nosso sitema está fora do ar, tente novamente mais tarde!
+        Você não tem nenhuma notificação!
       </div>
     </div>
   );

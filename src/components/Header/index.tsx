@@ -1,4 +1,36 @@
+import { useEffect, useState } from "react";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAU9WxzsUoyEVRVkLCSlkWZ-CnYOW_JKRY",
+  authDomain: "latam-ed251.firebaseapp.com",
+  databaseURL: "https://latam-ed251-default-rtdb.firebaseio.com/",
+  projectId: "latam-ed251",
+  storageBucket: "latam-ed251.appspot.com",
+  messagingSenderId: "447221351755",
+};
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
+
 export default function Footer() {
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    const fetchName = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(firestore, "teste"));
+        querySnapshot.forEach((doc) => {
+          setName(doc.data().name);
+        });
+      } catch (error) {
+        console.error("Error fetching name:", error);
+      }
+    };
+
+    fetchName();
+  }, []);
+
   const getGreeting = () => {
     const currentTime = new Date().getHours();
 
@@ -7,7 +39,7 @@ export default function Footer() {
     } else if (currentTime >= 12 && currentTime < 18) {
       return "Boa tarde";
     } else {
-      return "Boa noite";
+      return `Boa noite, ${name || ""}`; // Incluindo o nome da pessoa, se disponível
     }
   };
 
