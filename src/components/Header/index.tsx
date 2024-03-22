@@ -1,14 +1,37 @@
+import { useLocation } from "react-router-dom";
+import { cpfDict } from "../../utils/utils";
+
 export default function Footer() {
+  // Use useLocation to access the query string
+  const location = useLocation();
+
+  // A helper function to parse query parameters
+  const getQueryParams = (search: string) => {
+    return new URLSearchParams(search);
+  };
+
   const getGreeting = () => {
     const currentTime = new Date().getHours();
+    let greeting = "";
 
     if (currentTime >= 6 && currentTime < 12) {
-      return "Bom dia";
+      greeting = "Bom dia";
     } else if (currentTime >= 12 && currentTime < 18) {
-      return "Boa tarde";
+      greeting = "Boa tarde";
     } else {
-      return "Boa noite";
+      greeting = "Boa noite";
     }
+
+    const queryParams = getQueryParams(location.search);
+    const cpf = queryParams.get("cpf"); // Retrieve the cpf query parameter
+
+    if (cpf && Object.prototype.hasOwnProperty.call(cpfDict, cpf)) {
+      greeting += " " + cpfDict[cpf];
+    } else {
+      greeting += " " + cpfDict.default;
+    }
+
+    return greeting;
   };
 
   return (
@@ -41,12 +64,11 @@ export default function Footer() {
             borderRadius: "50%",
           }}
         />
-
         <h4
           style={{
             fontWeight: "400",
             fontSize: "clamp(0.8em, 1.5vw, 2em)",
-            color: "white", 
+            color: "white",
           }}
         >
           {getGreeting()}

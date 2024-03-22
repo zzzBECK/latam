@@ -1,50 +1,10 @@
-import Box, { FullWidthBox } from "../../components/Box";
 import maleta from "../../assets/maleta.svg";
 import mundo from "../../assets/mundo.svg";
 import react from "../../assets/react.svg";
 import tailandia from "../../assets/tailandia.jpg";
-import { useEffect, useState } from "react";
-import FirebaseService from "../../services/FirebaseService";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
-
-interface FirebaseItem {
-  key?: string;
-  [key: string]: unknown; // or any specific type according to your data structure
-}
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAU9WxzsUoyEVRVkLCSlkWZ-CnYOW_JKRY",
-  authDomain: "latam-ed251.firebaseapp.com",
-  databaseURL: "https://latam-ed251-default-rtdb.firebaseio.com/",
-  projectId: "latam-ed251",
-  storageBucket: "latam-ed251.appspot.com",
-  messagingSenderId: "447221351755",
-};
-
-const app = initializeApp(firebaseConfig);
-const firestore = getFirestore(app);
+import Box, { FullWidthBox } from "../../components/Box";
 
 export default function Home() {
-  // Explicitly define the type of the state variable as FirebaseItem[]
-  const [items, setItems] = useState<FirebaseItem[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(firestore, "teste"));
-      const items = querySnapshot.docs.map((doc) => ({
-        key: doc.id,
-        ...doc.data(),
-      }));
-      setItems(items);
-      console.log(items);
-    };
-
-    fetchData();
-  }, []);
-
-  console.log(items);
-
   return (
     <div
       style={{
