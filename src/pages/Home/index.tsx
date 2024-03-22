@@ -1,6 +1,6 @@
 import maleta from "../../assets/maleta.svg";
 import mundo from "../../assets/mundo.svg";
-import react from "../../assets/react.svg";
+import carro from "../../assets/carro.svg";
 import tailandia from "../../assets/tailandia.jpg";
 import Box, { FullWidthBox } from "../../components/Box";
 
@@ -45,7 +45,7 @@ export default function Home() {
       <div style={{ display: "flex", gap: "1em" }}>
         <Box title="Compre um pacote" image={maleta} />
         <Box title="Reserve um hotel" image={mundo} />
-        <Box title="Alugue um carro" image={react} />
+        <Box title="Alugue um carro" image={carro} />
       </div>
       <FullWidthBox
         title="Já tem um voo?"
